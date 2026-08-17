@@ -12,3 +12,10 @@ y = np.sin(x)
 
 plt.plot(x,y)
 plt.savefig(os.path.abspath(os.path.join(FIGURES_FOLDER, "my_image.pdf")))
+
+# New figure
+x = np.linspace(-np.pi, np.pi, 100)
+y = np.cos(x)
+
+plt.plot(x,y)
+plt.savefig(os.path.abspath(os.path.join(FIGURES_FOLDER, "my_new_image.pdf")))
