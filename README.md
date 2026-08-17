@@ -26,10 +26,6 @@ Then, paste the output here
 ├── README.md
 ├── latex
 │   ├── figures
-│   │   └── my_image.pdf
-│   ├── main.bbl
-│   ├── main.pdf
-│   ├── main.synctex.gz
 │   ├── main.tex
 │   └── references.bib
 ├── requirements.txt
