@@ -12,6 +12,14 @@ This is the repo for the project `Draft title`
 
 Authors: `author_name_1`, `author_name_2`, etc.
 
+## Setup
+
+In order to generate the figures from the script and build the article pdf, run the following script in the root directory:
+
+```bash
+python setup.py 
+```
+
 ## File tree
 
 To see the file tree, move to the root of the project and run
@@ -29,6 +37,7 @@ Then, paste the output here
 │   ├── main.tex
 │   └── references.bib
 ├── requirements.txt
+├── setup.py
 └── src
     └── generate_images.py
 ```
