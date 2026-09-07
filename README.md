@@ -19,11 +19,11 @@ Authors: `author_name_1`, `author_name_2`, etc.
 
 Create a virtual environment and install the dependencies.
 
-**Windows (PowerShell):**
+**Windows (Bash):**
 
 ```powershell
 python -m venv .venv
-./.venv/Scripts/activate
+source ./.venv/Scripts/activate
 pip install -r requirements.txt
 ```
 
@@ -32,7 +32,7 @@ pip install -r requirements.txt
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ### Every time after
