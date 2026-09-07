@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Setup script: Generate images and build PDF."""
+"""Build script: Generate images and build PDF."""
 
 import subprocess
 import sys
@@ -22,9 +22,23 @@ def run_cmd(cmd, desc, quiet=False, announce=True):
         print(f"✗ {desc} failed: {e}")
         return False
 
+def install_deps(requirements_path):
+    """Install dependencies from requirements.txt if not already installed."""
+    try:
+        import numpy  # noqa: F401
+        import matplotlib  # noqa: F401
+    except ImportError:
+        print("Installing dependencies from requirements.txt...")
+        subprocess.run([sys.executable, "-m", "pip", "install", "-r",
+                        str(requirements_path)], check=True)
+        print("✓ Dependencies installed")
+
+
 def main():
     start = time.time()
     base = Path(__file__).parent
+
+    install_deps(base / "requirements.txt")
 
     gen_script = base / "src" / "generate_images.py"
     if not gen_script.exists():
@@ -49,11 +63,11 @@ def main():
             sys.exit(1)
     print("✓ Build PDF completed")
 
-    for ext in ['.aux', '.log', '.out', '.toc', '.lot', '.lof', '.fls', '.blg']:
+    for ext in ['.aux', '.log', '.out', '.toc', '.lot', '.lof', '.fls', '.blg', '.fdb_latexmk']:
         (latex_dir / f"main{ext}").unlink(missing_ok=True)
 
     elapsed = time.time() - start
-    print(f"\n✓ Setup completed successfully! ({elapsed:.2f}s)")
+    print(f"\nBuilt project successfully in {elapsed:.2f} s.")
 
 if __name__ == "__main__":
     main()

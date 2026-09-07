@@ -1,0 +1,5 @@
+{
+    "latex-workshop.message.latexlog.exclude": [
+        "Warning--empty journal"
+    ],
+}

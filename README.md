@@ -1,5 +1,5 @@
 <!--
-Template designed for scientific articles workflow written in LaTeX and that code for simulations or figure generation.
+Template designed for scientific articles workflow written in LaTeX with simulations and figure generation in Python.
 
 Template author: Álvaro Salazar Cuadros
 https://github.com/alvaroslzar
@@ -12,13 +12,37 @@ This is the repo for the project `Draft title`
 
 Authors: `author_name_1`, `author_name_2`, etc.
 
+
 ## Setup
 
-In order to generate the figures from the script and build the article pdf, run the following script in the root directory:
+### First time (one-time only)
+
+Create a virtual environment and install the dependencies.
+
+**Windows (PowerShell):**
+
+```powershell
+python -m venv .venv
+./.venv/Scripts/activate
+pip install -r requirements.txt
+```
+
+**macOS / Linux:**
 
 ```bash
-python setup.py 
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
 ```
+
+### Every time after
+
+Build the project by running the following script in the root directory:
+
+```bash
+python build.py
+```
+
 
 ## File tree
 
@@ -32,43 +56,12 @@ Then, paste the output here
 .
 ├── LICENSE
 ├── README.md
+├── build.py
 ├── latex
 │   ├── figures
 │   ├── main.tex
 │   └── references.bib
 ├── requirements.txt
-├── setup.py
 └── src
     └── generate_images.py
 ```
-
-## Branches
-
-### `main`
-
-This is intended to be the working version of the project, with code without errors.
-
-### `coding`
-
-This brach is for code development for figures, simulations, etc.
-
-### `notes`
-
-Additional auxiliary branch to store notes, calculations and insights in TeX or Markdown. 
-
-## TODOs
-
-### Writing
-
-- [ ] Write this
-- [x] Write that
-
-### Reading
-
-- [ ] Read this
-- [x] Read that
-
-### Coding
-
-- [ ] Code this
-- [x] Code that
