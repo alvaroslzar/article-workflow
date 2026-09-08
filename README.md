@@ -23,7 +23,7 @@ Create a virtual environment and install the dependencies.
 
 ```powershell
 python -m venv .venv
-source ./.venv/Scripts/activate
+.venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
@@ -39,8 +39,9 @@ pip3 install -r requirements.txt
 
 Build the project by running the following script in the root directory:
 
-```bash
-python build.py
+```shell
+python build.py # Windows
+python3 build.py # macOS / Linux
 ```
 
 
