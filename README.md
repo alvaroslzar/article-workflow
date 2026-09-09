@@ -17,31 +17,21 @@ Authors: `author_name_1`, `author_name_2`, etc.
 
 ### First time (one-time only)
 
-Create a virtual environment and install the dependencies.
-
-**Windows (Bash):**
-
-```powershell
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-**macOS / Linux:**
+Create a virtual environment and install the dependencies (macOS/Linux):
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip3 install -r requirements.txt
+bash scripts/setup-nb-filter.sh
 ```
 
 ### Every time after
 
 Build the project by running the following script in the root directory:
 
-```shell
-python build.py # Windows
-python3 build.py # macOS / Linux
+```bash
+python3 scripts/build.py
 ```
 
 
