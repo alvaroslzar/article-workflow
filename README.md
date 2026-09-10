@@ -35,24 +35,16 @@ python3 scripts/build.py
 ```
 
 
-## File tree
+## Citation
 
-To see the file tree, move to the root of the project and run
-```bash
-tree -A -I "*.pdf|*.bbl|*.synctex.gz"
+The use of this work in scientific publications must be properly acknowledged.
+Please cite the following:
+
+**BibTeX**
+```
+<BibTeX_citation>
 ```
 
-Then, paste the output here
-```bash
-.
-├── LICENSE
-├── README.md
-├── build.py
-├── latex
-│   ├── figures
-│   ├── main.tex
-│   └── references.bib
-├── requirements.txt
-└── src
-    └── generate_images.py
-```
+## License
+
+This work is licensed under a Creative Commons Attribution 4.0 International License ([CC BY 4.0](/LICENSE)).
