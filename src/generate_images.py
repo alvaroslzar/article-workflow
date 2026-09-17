@@ -4,7 +4,7 @@ from matplotlib import pyplot as plt
 
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_DIR = os.path.abspath(os.path.join(script_dir, "..", "latex", "figures"))
+OUTPUT_DIR = os.path.abspath(os.path.join(script_dir, "manuscript", "figures"))
 
 # Ensure output directory exists
 os.makedirs(OUTPUT_DIR, exist_ok=True)
