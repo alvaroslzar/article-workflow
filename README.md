@@ -23,6 +23,14 @@ Create a virtual environment and install the dependencies (macOS/Linux):
 python3 -m venv .venv
 source .venv/bin/activate
 pip3 install -r requirements.txt
+```
+
+#### Notebook dependencies (optional)
+
+If you want to run the notebooks, then install the optional notebook dependencies and also run the `setup-nb-filter.sh` script.
+
+```bash
+pip3 install -r nb-requirements.txt
 bash scripts/setup-nb-filter.sh
 ```
 
