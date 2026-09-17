@@ -8,7 +8,7 @@ https://github.com/alvaroslzar
 
 # Draft title
 
-This is the repo for the project `Draft title`
+This repository contains the TEX source and Python scripts for the `<project-name>`
 
 Authors: `author_name_1`, `author_name_2`, etc.
 
