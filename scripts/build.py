@@ -35,6 +35,12 @@ def run_generate_images(gen_script):
     if not run_cmd([sys.executable, str(gen_script)], "Image generation"):
         sys.exit(1)
 
+def make_wls_executable(script_path):
+    if not script_path.exists():
+        print(f"Error: {script_path} not found"); sys.exit(1)
+    if not run_cmd(["bash", str(script_path)], "Make .wls executable"):
+        sys.exit(1)
+
 def build_pdf(manuscript_dir):
     main_tex = manuscript_dir / "main.tex"
     if not main_tex.exists():
@@ -76,6 +82,9 @@ def main():
 
     gen_script = base / ".." / "src" / "generate_images.py"
     run_generate_images(gen_script)
+
+    wls_script = base / "make-wls-executable.sh"
+    make_wls_executable(wls_script)
 
     manuscript_dir = base / ".." / "src" / "manuscript"
     build_pdf(manuscript_dir)

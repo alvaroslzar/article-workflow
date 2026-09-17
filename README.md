@@ -12,6 +12,13 @@ This repository contains the TEX source and Python scripts for the `<project-nam
 
 Authors: `author_name_1`, `author_name_2`, etc.
 
+## Dependencies
+
+### Wolfram Mathematica
+
+This repository contains Wolfram script files, which require a Wolfram account to run the `wolframscript` command.
+You may install the **free Wolfram Engine** from the [official webpage](https://www.wolfram.com/engine/).
+
 
 ## Setup
 
@@ -40,6 +47,15 @@ Build the project by running the following script in the root directory:
 
 ```bash
 python3 scripts/build.py
+```
+
+#### Wolfram scripts
+
+If you want to execute the `.wls` Wolfram scripts, run
+
+```bash
+chmod +x scripts/make-wls-executable.sh
+./scripts/make-wls-executable.sh
 ```
 
 
