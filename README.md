@@ -10,7 +10,7 @@ https://github.com/alvaroslzar
 
 This repository contains the TEX source and Python scripts for the `<project-name>`
 
-Authors: `author_name_1`, `author_name_2`, etc.
+Authors: Álvaro Salazar Cuadros and Diego Sáez-Chillón Gómez.
 
 ## Dependencies
 
