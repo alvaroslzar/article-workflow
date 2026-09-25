@@ -1,5 +1,5 @@
 {
     "latex-workshop.message.bibtexlog.exclude": [
-        "Warning--empty journal"
-    ],
+        "^empty journal$"
+    ]
 }
